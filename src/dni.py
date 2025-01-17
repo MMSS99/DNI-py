@@ -19,7 +19,7 @@ class Dni:
         return self.dni[-1]
     
     def darLetra(self):
-        return self.dni + CodigoControl(int(self.getDni())).asignarLetra()
+        return self.dni + CodigoControl().asignarLetra(int(self.getDni()))
 
     def comprobarDni(self):
-        return True if CodigoControl(self.getNumero(), self.getLetra()).comprobarLetra() else False
+        return True if CodigoControl().comprobarLetra(self.getNumero(), self.getLetra()) else False
